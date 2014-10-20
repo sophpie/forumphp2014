@@ -3,10 +3,10 @@
   "description" : "Skeleton Application for ZF2",
   "require" : {
     "php" : ">=5.3.3",
+    "zendframework/zendframework" : ">2.2.0rc1",
     "doctrine/doctrine-orm-module" : "=0.8.0"
   },
   "require-dev" : {
-    "zendframework/zendframework" : ">2.2.0rc1"
   },
   "keywords" : [ "framework", "zf2" ],
   "license" : "BSD-3-Clause",
