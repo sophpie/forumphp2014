@@ -84,4 +84,9 @@ class MonitorController extends AbstractActionController
         		'delay' => $delay,
         );
     }
+    
+    public function slowqueryAction()
+    {
+    	
+    }
 }
