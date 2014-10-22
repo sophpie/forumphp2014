@@ -65,6 +65,7 @@ return array(
             'Application\Reset' => 'Application\Controller\ResetController',
             'Application\Census' => 'Application\Controller\CensusController',
             'Application\Monitor' => 'Application\Controller\MonitorController',
+            'Application\ZrayExtension' => 'Application\Controller\ZrayExtensionController',
         ),
     ),
     'view_manager' => array(
