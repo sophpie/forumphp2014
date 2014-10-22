@@ -9,7 +9,17 @@ class CensusController extends AbstractActionController
     public function indexAction()
     {
         $om = $this->serviceLocator->get('Doctrine\ORM\EntityManager');
-        $alien = $om->find('Application\Entity\Alien',5);
-        var_dump($alien);
+        $qb = $om->createQueryBuilder();
+        $qb->select(array('a','c'))
+        	->from('Application\Entity\Alien','a')
+        	->from('Application\Entity\City','c')
+        	->where('c.name = a.city')
+        	->orderBy('a.lastName','ASC')
+        	->addOrderBy('a.firstName');
+        $dql = $qb->getDQL();
+        $query = $om->createQuery($dql);
+        $query->useQueryCache(false);
+        $query->useResultCache(false);
+        $result = $query->getResult();
     }
 }
